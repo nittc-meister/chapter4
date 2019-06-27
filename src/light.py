@@ -11,4 +11,4 @@ GPIO.output(14, GPIO.LOW)
 time.sleep(1)
 
 
-GPIO.cleanup()
+
