@@ -1,15 +1,13 @@
-import RPi.GPIO as GPIO
 import time
+import RPi.GPIO as GPIO
 
-COUNT = 3
-PIN = 11
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(PIN,GPIO.OUT)
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(14, GPIO.OUT)
 
-for _ in xrange(COUNT):
-    GPIO.output(PIN,True)
-    time.sleep(1.0)
-    GPIO.output(PIN,False)
-    time.sleep(1.0)
+while True:
+    GPIO.output(14, GPIO.HIGH)
+    time.sleep(1)
+    GPIO.output(14, GPIO.LOW)
+    time.sleep(1)
 
 GPIO.cleanup()
