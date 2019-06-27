@@ -9,7 +9,7 @@ while True:
 	GPIO.output(14, GPIO.HIGH)
 	time.sleep(0.5)
 
-	GPIO.output(14 GPIO.LOW)
+	GPIO.output(14, GPIO.LOW)
 	time.sleep(0.5)
 
 GPIO.cleanup()
